@@ -1,0 +1,12 @@
+<%= form_with(model: @follow_request, local: true) do |f| %>
+
+  <%= f.hidden_field :sender_id, value: @user.id %>
+
+  <div class="form-group">
+    <%= f.label :recipient_id %>
+
+    <%= f.text_field :recipient_id, class: "form-control" %>
+  </div>
+
+  <%= f.submit "Create follow request", class: "btn btn-block btn-outline-secondary" %>
+<% end %>

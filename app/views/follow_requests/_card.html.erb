@@ -1,0 +1,50 @@
+<div class="card mb-3">
+  <h2 class="card-header h4">
+    Follow Request #<%= follow_request.id %>
+  </h2>
+
+  <div class="card-body">
+    <dl class="mb-1">
+      <dt>Sender</dt>
+      <dd>
+        <% if @follow_request.sender.present? %>
+          <%= link_to follow_request.sender, follow_request.sender %>
+        <% end %>
+      </dd>
+
+      <dt>Recipient</dt>
+      <dd>
+        <% if @follow_request.recipient.present? %>
+          <%= link_to follow_request.recipient, follow_request.recipient %>
+        <% end %>
+      </dd>
+
+    </dl>
+
+    <div class="row">
+      <div class="col">
+        <%= link_to_show_or_back follow_request, '<i class="fas fa-search-plus"></i>'.html_safe, '<i class="fas fa-chevron-left"></i>'.html_safe, class: "btn btn-block btn-outline-secondary" %>
+      </div>
+
+      <div class="col">
+        <% if current_user == @follow_request.sender %>
+          <%= link_to edit_follow_request_url(follow_request), class: "btn btn-block btn-sm btn-outline-secondary" do %>
+            <i class="fas fa-edit"></i>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="col">
+        <% if current_user == @follow_request.sender %>
+          <%= link_to follow_request, method: :delete, data: { confirm: "Do you really want to delete this follow_request?" }, class: "btn btn-block btn-outline-secondary" do %>
+            <i class="fas fa-trash-alt"></i>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-footer text-muted">
+    Last updated <%= time_ago_in_words(follow_request.updated_at) %> ago
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<%= form_with(model: @comment, local: true) do |f| %>
+
+  <div class="form-group">
+    <%= f.label :body %>
+    <%= f.text_area :body, rows: "3", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :author_id %>
+
+    <%= f.collection_select :author_id, User.all, :id, :to_s, {}, class: "form-control" %>
+  </div>
+
+  <%= f.hidden_field :photo_id, value: @photo.id %>
+
+  <%= f.submit "Create comment", class: "btn btn-block btn-outline-secondary" %>
+<% end %>

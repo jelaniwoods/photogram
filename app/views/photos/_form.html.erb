@@ -1,0 +1,50 @@
+<% was_validated = photo.errors.any? %>
+
+<%= form_with(model: photo, local: true, novalidate: true, class: "mb-3") do |f| %>
+  <div class="form-group">
+    <% caption_class = "form-control" %>
+    <% caption_was_invalid = photo.errors.include?(:caption) %>
+
+    <% if was_validated %>
+      <% if caption_was_invalid %>
+        <% caption_class << " is-invalid" %>
+      <% else %>
+        <% caption_class << " is-valid" %>
+      <% end %>
+    <% end %>
+
+    <%= f.label :caption %>
+    <%= f.text_field :caption, class: caption_class, placeholder: "Enter caption" %>
+    <% if caption_was_invalid %>
+      <% photo.errors.full_messages_for(:caption).each do |message| %>
+        <div class="invalid-feedback d-flex">
+          <%= message %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="form-group">
+    <% image_class = "form-control" %>
+    <% image_was_invalid = photo.errors.include?(:image) %>
+
+    <% if was_validated %>
+      <% if image_was_invalid %>
+        <% image_class << " is-invalid" %>
+      <% else %>
+        <% image_class << " is-valid" %>
+      <% end %>
+    <% end %>
+
+    <%= f.label :image %>
+    <%= f.file_field :image, class: "form-control" %>
+    <% if image_was_invalid %>
+      <% photo.errors.full_messages_for(:image).each do |message| %>
+        <div class="invalid-feedback d-flex">
+          <%= message %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <%= f.hidden_field :owner_id, value: current_user.id %>
+  <%= f.button class: "btn btn-outline-secondary btn-block" %>
+<% end %>

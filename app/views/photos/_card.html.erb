@@ -1,0 +1,51 @@
+<div class="card mb-3">
+  <h2 class="card-header h4">
+    Photo #<%= photo.id %>
+  </h2>
+
+  <div class="card-body">
+    <dl class="mb-1">
+      <dt>Caption</dt>
+      <dd><%= photo.caption %></dd>
+
+      <dt>Image</dt>
+      <dd>
+        <%= cl_image_tag @photo.image, class: "img-fluid" %>
+      </dd>
+
+      <dt>Owner</dt>
+      <dd>
+        <% if @photo.owner.present? %>
+          <%= link_to photo.owner, photo.owner %>
+        <% end %>
+      </dd>
+
+    </dl>
+
+    <div class="row">
+      <div class="col">
+        <%= link_to_show_or_back photo, '<i class="fas fa-search-plus"></i>'.html_safe, '<i class="fas fa-chevron-left"></i>'.html_safe, class: "btn btn-block btn-outline-secondary" %>
+      </div>
+
+      <div class="col">
+        <% if current_user == @photo.owner %>
+          <%= link_to edit_photo_url(photo), class: "btn btn-block btn-sm btn-outline-secondary" do %>
+            <i class="fas fa-edit"></i>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="col">
+        <% if current_user == @photo.owner %>
+          <%= link_to photo, method: :delete, data: { confirm: "Do you really want to delete this photo?" }, class: "btn btn-block btn-outline-secondary" do %>
+            <i class="fas fa-trash-alt"></i>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-footer text-muted">
+    Last updated <%= time_ago_in_words(photo.updated_at) %> ago
+  </div>
+</div>

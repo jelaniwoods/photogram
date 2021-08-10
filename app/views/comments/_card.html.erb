@@ -1,0 +1,49 @@
+<div class="card mb-3">
+  <h2 class="card-header h4">
+    Comment #<%= comment.id %>
+  </h2>
+
+  <div class="card-body">
+    <dl class="mb-1">
+      <dt>Body</dt>
+      <dd><%= comment.body %></dd>
+
+      <dt>Author</dt>
+      <dd>
+        <% if @comment.author.present? %>
+          <%= link_to comment.author, comment.author %>
+        <% end %>
+      </dd>
+
+      <dt>Photo</dt>
+      <dd>
+        <% if @comment.photo.present? %>
+          <%= link_to comment.photo, comment.photo %>
+        <% end %>
+      </dd>
+
+    </dl>
+
+    <div class="row">
+      <div class="col">
+        <%= link_to_show_or_back comment, '<i class="fas fa-search-plus"></i>'.html_safe, '<i class="fas fa-chevron-left"></i>'.html_safe, class: "btn btn-block btn-outline-secondary" %>
+      </div>
+
+      <div class="col">
+        <%= link_to edit_comment_url(comment), class: "btn btn-block btn-outline-secondary" do %>
+          <i class="fas fa-edit"></i>
+        <% end %>
+      </div>
+
+      <div class="col">
+        <%= link_to comment, method: :delete, data: { confirm: "Do you really want to delete this comment?" }, class: "btn btn-block btn-outline-secondary" do %>
+          <i class="fas fa-trash-alt"></i>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-footer text-muted">
+    Last updated <%= time_ago_in_words(comment.updated_at) %> ago
+  </div>
+</div>
