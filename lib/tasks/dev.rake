@@ -866,6 +866,22 @@ namespace :dev do
       {id: 2402, sender_id: 104, recipient_id: 120, created_at: "2018-10-24 17:24:38", updated_at: "2019-10-08 10:25:00"}
     ]
     
+        photo_urls = [
+      "https://free-images.com/lg/7874/person_top_mountian_view.jpg",
+      "https://free-images.com/lg/435d/person_inside_cave.jpg",
+      "https://free-images.com/lg/56a1/person_wearing_hat.jpg",
+      "https://free-images.com/lg/691f/person_from_back_in.jpg",
+      "https://free-images.com/lg/aad8/person_on_rescue_boat.jpg",
+      "https://free-images.com/lg/ca95/person_practice_using_sight.jpg",
+      "https://free-images.com/lg/c15e/person_on_fast_rescue.jpg",
+      "https://free-images.com/lg/c6a3/person_on_river_with.jpg",
+      "https://free-images.com/lg/a9ed/person_holds_lake_eir.jpg",
+      "https://free-images.com/lg/2997/person_on_ship_smashes.jpg",
+      "https://free-images.com/lg/b5ca/person_speaking_at_conference.jpg",
+      "https://free-images.com/lg/07c3/man_person_technology_music.jpg",
+      "https://free-images.com/lg/402b/ux_design_webdesign_app_1.jpg"
+    ]
+
     photos = [
       {id: 628, caption: "Every flight begins with a fall.", image: "https://robohash.org/eligendiprovidentsed.png?size=300x300&set=set1", owner_id: 81, comments_count: 5, created_at: "2017-10-16 01:36:25", updated_at: "2019-10-08 10:25:00"},
       {id: 629, caption: "And so he spoke, and so he spoke, that Lord of Castamere, but now the rains weep o'er his hall, with no one there to hear. Yes, now the rains weep o'er his hall, and not a soul to hear.", image: "https://robohash.org/officiaeligendirepudiandae.png?size=300x300&set=set1", owner_id: 81, comments_count: 2, created_at: "2015-10-07 17:04:58", updated_at: "2019-10-08 10:25:00"},
@@ -1193,6 +1209,10 @@ namespace :dev do
     ]
     Photo.insert_all!(photos)
     p "photos"
+    Photo.find_each do |photo|
+      photo.update(remote_image_url: photo_urls.sample)
+    end
+    p "real images"
 
     FollowRequest.insert_all!(follow_requests)
     p "follow requests added"
