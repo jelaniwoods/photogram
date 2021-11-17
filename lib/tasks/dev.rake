@@ -1206,7 +1206,7 @@ namespace :dev do
       {id: 948, caption: "Winter is coming.", image: "https://robohash.org/sitsimiliqueet.png?size=300x300&set=set1", owner_id: 120, comments_count: 5, created_at: "2019-02-02 22:45:19", updated_at: "2019-10-08 10:25:00"},
       {id: 949, caption: "The North remembers.", image: "https://robohash.org/autperspiciatisquasi.png?size=300x300&set=set1", owner_id: 120, comments_count: 6, created_at: "2018-01-06 13:17:34", updated_at: "2019-10-08 10:25:00"},
       {id: 950, caption: "Hodor? Hodor.", image: "https://robohash.org/distinctiosedmolestiae.png?size=300x300&set=set1", owner_id: 120, comments_count: 6, created_at: "2018-10-30 02:17:52", updated_at: "2019-10-08 10:25:00"},
-      {id: 951, caption: "A great pic!", image: "http://res-5.cloudinary.com/dz9hkaczr/image/upload/v1637172151/iw2hbuvpld7sjdpvmfgb.jpg", owner_id: 120, comments_count: 4, created_at: "2018-10-30 02:17:52", updated_at: "2019-10-08 10:25:00"}
+      {id: 951, caption: "", image: "http://res-5.cloudinary.com/dz9hkaczr/image/upload/v1637172151/iw2hbuvpld7sjdpvmfgb.jpg", owner_id: 92, comments_count: 4, created_at: "2018-10-30 02:17:52", updated_at: "2019-10-08 10:25:00"}
     ]
     Photo.insert_all!(photos)
     p "photos"
@@ -2779,9 +2779,9 @@ namespace :dev do
       {id: 4286, photo_id: 950, body: "Only the educated are free.", author_id: 104, created_at: "2019-03-05 17:39:26", updated_at: "2019-10-08 10:25:00"},
       {id: 4287, photo_id: 950, body: "Quality is not an act, it is a habit.", author_id: 82, created_at: "2019-02-20 18:14:17", updated_at: "2019-10-08 10:25:00"},
       {id: 4288, photo_id: 950, body: "Quality is not an act, it is a habit.", author_id: 83, created_at: "2018-11-11 12:16:00", updated_at: "2019-10-08 10:25:00"},
-      {id: 4289, photo_id: 951, body: "Horses at Bianintz", author_id: 83, created_at: "2018-11-11 12:16:00", updated_at: "2019-10-08 10:25:00"},
+      {id: 4289, photo_id: 951, body: "Horses at Bianintz", author_id: 92, created_at: "2018-11-11 12:16:00", updated_at: "2019-10-08 10:25:00"},
       {id: 4290, photo_id: 951, body: "I'll connect the optical SMTP program, that should bus the TCP feed!", author_id: 118, created_at: "2018-11-11 12:16:00", updated_at: "2019-10-08 10:25:00"},
-      {id: 4291, photo_id: 951, body: "Try to copy the HBOD array, maybe it will compess the multi-byte bus!", author_id: 118, created_at: "2018-11-11 12:16:00", updated_at: "2019-10-08 10:25:00"},
+      {id: 4291, photo_id: 951, body: "Try to copy the JBOD array, maybe it will compress the multi-byte bus!", author_id: 118, created_at: "2018-11-11 12:16:00", updated_at: "2019-10-08 10:25:00"},
       {id: 4292, photo_id: 951, body: "Use the virtual SCSI monitor, then you can connect the optical system!", author_id: 118, created_at: "2018-11-11 12:16:00", updated_at: "2019-10-08 10:25:00"}
     ]
     
@@ -4255,7 +4255,7 @@ namespace :dev do
       {id: 4221, fan_id: 83, photo_id: 950, created_at: "2018-12-09 23:55:00", updated_at: "2019-10-08 10:25:00"},
       {id: 4222, fan_id: 83, photo_id: 950, created_at: "2019-01-27 16:21:31", updated_at: "2019-10-08 10:25:00"},
       {id: 4223, fan_id: 105, photo_id: 951, created_at: "2019-01-27 16:21:31", updated_at: "2019-10-08 10:25:00"},
-      {id: 4224, fan_id: 111, photo_id: 951, created_at: "2019-01-27 16:21:31", updated_at: "2019-10-08 10:25:00"}
+      {id: 4224, fan_id: 92, photo_id: 951, created_at: "2019-01-27 16:21:31", updated_at: "2019-10-08 10:25:00"}
     ]
     Like.insert_all!(likes)
     p "likes"
