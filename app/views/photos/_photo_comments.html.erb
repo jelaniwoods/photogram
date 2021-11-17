@@ -10,7 +10,7 @@
   <ul class="list-group list-group-flush">
     <% @photo.comments.each do |comment| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <%= link_to comment.id, comment_path(comment) %>
+        <%= link_to comment.body, comment_path(comment) %>
 
         <%= link_to comment, method: :delete, data: { confirm: "Do you really want to delete this comment" } do %>
           <i class="fas fa-trash-alt"></i>

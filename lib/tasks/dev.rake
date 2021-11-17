@@ -26,7 +26,7 @@ namespace :dev do
       {id: 89, username: "jackie", email: "jackie@example.com", created_at: "2016-10-28 00:47:57", updated_at: "2019-10-08 10:25:00"},
       {id: 90, username: "lucius", email: "lucius@example.com", created_at: "2014-06-15 07:42:16", updated_at: "2019-10-08 10:25:00"},
       {id: 91, username: "phylicia", email: "phylicia@example.com", created_at: "2016-11-11 04:22:51", updated_at: "2019-10-08 10:25:00"},
-      {id: 92, username: "trey", email: "trey@example.com", created_at: "2015-03-19 22:51:10", updated_at: "2019-10-08 10:25:00"},
+      {id: 92, username: "carol", email: "carol@example.com", created_at: "2015-03-19 22:51:10", updated_at: "2019-10-08 10:25:00"},
       {id: 93, username: "wilford", email: "wilford@example.com", created_at: "2018-07-03 04:50:16", updated_at: "2019-10-08 10:25:00"},
       {id: 94, username: "tristan", email: "tristan@example.com", created_at: "2016-04-11 04:31:49", updated_at: "2019-10-08 10:25:00"},
       {id: 95, username: "leilani", email: "leilani@example.com", created_at: "2016-07-07 15:54:04", updated_at: "2019-10-08 10:25:00"},
@@ -1205,13 +1205,15 @@ namespace :dev do
       {id: 947, caption: "Give me honorable enemies rather than ambitious ones, and I'll sleep more easily by night.", image: "https://robohash.org/etutexpedita.png?size=300x300&set=set1", owner_id: 119, comments_count: 1, created_at: "2018-10-10 06:25:50", updated_at: "2019-10-08 10:25:00"},
       {id: 948, caption: "Winter is coming.", image: "https://robohash.org/sitsimiliqueet.png?size=300x300&set=set1", owner_id: 120, comments_count: 5, created_at: "2019-02-02 22:45:19", updated_at: "2019-10-08 10:25:00"},
       {id: 949, caption: "The North remembers.", image: "https://robohash.org/autperspiciatisquasi.png?size=300x300&set=set1", owner_id: 120, comments_count: 6, created_at: "2018-01-06 13:17:34", updated_at: "2019-10-08 10:25:00"},
-      {id: 950, caption: "Hodor? Hodor.", image: "https://robohash.org/distinctiosedmolestiae.png?size=300x300&set=set1", owner_id: 120, comments_count: 6, created_at: "2018-10-30 02:17:52", updated_at: "2019-10-08 10:25:00"}
+      {id: 950, caption: "Hodor? Hodor.", image: "https://robohash.org/distinctiosedmolestiae.png?size=300x300&set=set1", owner_id: 120, comments_count: 6, created_at: "2018-10-30 02:17:52", updated_at: "2019-10-08 10:25:00"},
+      {id: 951, caption: "A great pic!", image: "http://res-5.cloudinary.com/dz9hkaczr/image/upload/v1637172151/iw2hbuvpld7sjdpvmfgb.jpg", owner_id: 120, comments_count: 4, created_at: "2018-10-30 02:17:52", updated_at: "2019-10-08 10:25:00"}
     ]
     Photo.insert_all!(photos)
     p "photos"
     Photo.find_each do |photo|
       photo.update(remote_image_url: photo_urls.sample)
     end
+    Photo.find(951).update(remote_image_url: "http://res-5.cloudinary.com/dz9hkaczr/image/upload/v1637172151/iw2hbuvpld7sjdpvmfgb.jpg")
     p "real images"
 
     FollowRequest.insert_all!(follow_requests)
@@ -2776,7 +2778,11 @@ namespace :dev do
       {id: 4285, photo_id: 950, body: "Control thy passions lest they take vengence on thee.", author_id: 111, created_at: "2019-02-18 17:37:09", updated_at: "2019-10-08 10:25:00"},
       {id: 4286, photo_id: 950, body: "Only the educated are free.", author_id: 104, created_at: "2019-03-05 17:39:26", updated_at: "2019-10-08 10:25:00"},
       {id: 4287, photo_id: 950, body: "Quality is not an act, it is a habit.", author_id: 82, created_at: "2019-02-20 18:14:17", updated_at: "2019-10-08 10:25:00"},
-      {id: 4288, photo_id: 950, body: "Quality is not an act, it is a habit.", author_id: 83, created_at: "2018-11-11 12:16:00", updated_at: "2019-10-08 10:25:00"}
+      {id: 4288, photo_id: 950, body: "Quality is not an act, it is a habit.", author_id: 83, created_at: "2018-11-11 12:16:00", updated_at: "2019-10-08 10:25:00"},
+      {id: 4289, photo_id: 951, body: "Horses at Bianintz", author_id: 83, created_at: "2018-11-11 12:16:00", updated_at: "2019-10-08 10:25:00"},
+      {id: 4290, photo_id: 951, body: "I'll connect the optical SMTP program, that should bus the TCP feed!", author_id: 118, created_at: "2018-11-11 12:16:00", updated_at: "2019-10-08 10:25:00"},
+      {id: 4291, photo_id: 951, body: "Try to copy the HBOD array, maybe it will compess the multi-byte bus!", author_id: 118, created_at: "2018-11-11 12:16:00", updated_at: "2019-10-08 10:25:00"},
+      {id: 4292, photo_id: 951, body: "Use the virtual SCSI monitor, then you can connect the optical system!", author_id: 118, created_at: "2018-11-11 12:16:00", updated_at: "2019-10-08 10:25:00"}
     ]
     
     Comment.insert_all!(comments)
@@ -4247,7 +4253,9 @@ namespace :dev do
       {id: 4219, fan_id: 83, photo_id: 950, created_at: "2018-11-04 17:30:16", updated_at: "2019-10-08 10:25:00"},
       {id: 4220, fan_id: 81, photo_id: 950, created_at: "2019-04-02 18:32:39", updated_at: "2019-10-08 10:25:00"},
       {id: 4221, fan_id: 83, photo_id: 950, created_at: "2018-12-09 23:55:00", updated_at: "2019-10-08 10:25:00"},
-      {id: 4222, fan_id: 83, photo_id: 950, created_at: "2019-01-27 16:21:31", updated_at: "2019-10-08 10:25:00"}
+      {id: 4222, fan_id: 83, photo_id: 950, created_at: "2019-01-27 16:21:31", updated_at: "2019-10-08 10:25:00"},
+      {id: 4223, fan_id: 105, photo_id: 951, created_at: "2019-01-27 16:21:31", updated_at: "2019-10-08 10:25:00"},
+      {id: 4224, fan_id: 111, photo_id: 951, created_at: "2019-01-27 16:21:31", updated_at: "2019-10-08 10:25:00"}
     ]
     Like.insert_all!(likes)
     p "likes"
