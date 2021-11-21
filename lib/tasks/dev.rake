@@ -867,19 +867,29 @@ namespace :dev do
     ]
     
         photo_urls = [
-      "https://free-images.com/lg/7874/person_top_mountian_view.jpg",
-      "https://free-images.com/lg/435d/person_inside_cave.jpg",
-      "https://free-images.com/lg/56a1/person_wearing_hat.jpg",
-      "https://free-images.com/lg/691f/person_from_back_in.jpg",
-      "https://free-images.com/lg/aad8/person_on_rescue_boat.jpg",
-      "https://free-images.com/lg/ca95/person_practice_using_sight.jpg",
-      "https://free-images.com/lg/c15e/person_on_fast_rescue.jpg",
-      "https://free-images.com/lg/c6a3/person_on_river_with.jpg",
-      "https://free-images.com/lg/a9ed/person_holds_lake_eir.jpg",
-      "https://free-images.com/lg/2997/person_on_ship_smashes.jpg",
-      "https://free-images.com/lg/b5ca/person_speaking_at_conference.jpg",
-      "https://free-images.com/lg/07c3/man_person_technology_music.jpg",
-      "https://free-images.com/lg/402b/ux_design_webdesign_app_1.jpg"
+      "http://res-2.cloudinary.com/initialversion/image/upload/v1637520519/hohzjnd7tu3jpgnbhcr2.jpg",
+      "http://res-2.cloudinary.com/initialversion/image/upload/v1637520508/gqfu7m7zemahcwrfslcy.jpg",
+      "http://res-1.cloudinary.com/initialversion/image/upload/v1637520492/i6qlsa0snpjcrdtsqiry.jpg",
+      "http://res-2.cloudinary.com/initialversion/image/upload/v1637519920/bunhhcjwmlmt2iyxwswx.jpg",
+      "http://res-4.cloudinary.com/initialversion/image/upload/v1637519908/gl8g3xheyidreelrvtet.jpg",
+      "http://res-4.cloudinary.com/initialversion/image/upload/v1637519896/a4sgnnkf2epccq6klgq4.jpg",
+      "http://res-4.cloudinary.com/initialversion/image/upload/v1637519885/ehjwc8gxlfww99azpiby.jpg",
+      "http://res-5.cloudinary.com/initialversion/image/upload/v1637519868/ksbujphioyi3vh5rmj6g.jpg",
+      "http://res-4.cloudinary.com/initialversion/image/upload/v1637519857/ym7rjteynwjycnm2kchk.jpg",
+      "http://res-2.cloudinary.com/initialversion/image/upload/v1637519845/vlb1qrnjyzrv3y4bwssw.jpg",
+      "http://res-4.cloudinary.com/initialversion/image/upload/v1637519829/xdnudwpfoq42mghpzi2w.jpg",
+      "http://res-5.cloudinary.com/initialversion/image/upload/v1637519816/bmgybr29piuvsaxt7bvt.jpg",
+      "http://res-1.cloudinary.com/initialversion/image/upload/v1637519804/vvklhy6mfruuzddbnbbu.jpg",
+      "http://res-3.cloudinary.com/initialversion/image/upload/v1637519792/aunmuks9pllqrpvqtxba.jpg",
+      "http://res-5.cloudinary.com/initialversion/image/upload/v1637519778/ufrgu4lrilj98jjqklrc.jpg",
+      "http://res-5.cloudinary.com/initialversion/image/upload/v1637519763/xxhuczxfnfupeqbcnbze.jpg",
+      "http://res-4.cloudinary.com/initialversion/image/upload/v1637519751/k4hp67vew0lquq3pojbn.jpg",
+      "http://res-1.cloudinary.com/initialversion/image/upload/v1637519716/ask5xkrgozovdu6kipi8.jpg",
+      "http://res-5.cloudinary.com/initialversion/image/upload/v1637519689/uttsit8tqwiu4hrlknt1.jpg",
+      "http://res-5.cloudinary.com/initialversion/image/upload/v1637519673/cxfs6mjabjjs4uftrnyo.jpg",
+      "http://res-2.cloudinary.com/initialversion/image/upload/v1637519651/fbqoaa7mf9u55sigfshj.jpg",
+      "http://res-3.cloudinary.com/initialversion/image/upload/v1637519631/cr3qtxrjhcwrqfyha51k.jpg",
+      "http://res-3.cloudinary.com/initialversion/image/upload/v1637519608/hoslih74qfxzqovjddcq.jpg"
     ]
 
     photos = [
@@ -1206,7 +1216,7 @@ namespace :dev do
       {id: 948, caption: "Winter is coming.", image: photo_urls.sample, owner_id: 120, comments_count: 5, created_at: "2019-02-02 22:45:19", updated_at: "2019-10-08 10:25:00"},
       {id: 949, caption: "The North remembers.", image: photo_urls.sample, owner_id: 120, comments_count: 6, created_at: "2018-01-06 13:17:34", updated_at: "2019-10-08 10:25:00"},
       {id: 950, caption: "Hodor? Hodor.", image: photo_urls.sample, owner_id: 120, comments_count: 6, created_at: "2018-10-30 02:17:52", updated_at: "2019-10-08 10:25:00"},
-      {id: 951, caption: "", image: "http://res-5.cloudinary.com/dz9hkaczr/image/upload/v1637172151/iw2hbuvpld7sjdpvmfgb.jpg", owner_id: 92, comments_count: 4, created_at: "2018-10-30 02:17:52", updated_at: "2019-10-08 10:25:00"}
+      {id: 951, caption: "", image: "https://res.cloudinary.com/dt1gn6erd/image/upload/v1637168741/jhfr6lg26efyccuha8yw.jpg", owner_id: 92, comments_count: 4, created_at: "2018-10-30 02:17:52", updated_at: "2019-10-08 10:25:00"}
     ]
     Photo.insert_all!(photos)
     p "photos"
