@@ -139,6 +139,10 @@ GEM
       marcel (~> 1.0.0)
       mini_mime (>= 0.1.3)
       ssrf_filter (~> 1.0)
+    carrierwave-base64 (2.10.0)
+      carrierwave (>= 2.2.1)
+      marcel (~> 1.0.0)
+      mime-types (~> 3.0)
     cloudinary (1.20.0)
       aws_cf_signer
       rest-client (>= 2.0.0)
@@ -277,12 +281,16 @@ GEM
     mime-types-data (3.2021.0704)
     mini_magick (4.11.0)
     mini_mime (1.1.0)
+    mini_portile2 (2.6.1)
     minitest (5.14.4)
     momentjs-rails (2.20.1)
       railties (>= 3.1)
     msgpack (1.4.2)
     netrc (0.11.0)
     nio4r (2.5.8)
+    nokogiri (1.12.2)
+      mini_portile2 (~> 2.6.1)
+      racc (~> 1.4)
     nokogiri (1.12.2-x86_64-linux)
       racc (~> 1.4)
     octicons (15.0.0)
@@ -466,6 +474,7 @@ DEPENDENCIES
   bootstrap4-kaminari-views
   byebug
   carrierwave
+  carrierwave-base64
   cloudinary
   coffee-rails
   database_cleaner
