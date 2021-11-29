@@ -1216,7 +1216,7 @@ namespace :dev do
       {id: 948, caption: "Winter is coming.", image: photo_urls.sample, owner_id: 120, comments_count: 5, created_at: "2019-02-02 22:45:19", updated_at: "2019-10-08 10:25:00"},
       {id: 949, caption: "The North remembers.", image: photo_urls.sample, owner_id: 120, comments_count: 6, created_at: "2018-01-06 13:17:34", updated_at: "2019-10-08 10:25:00"},
       {id: 950, caption: "Hodor? Hodor.", image: photo_urls.sample, owner_id: 120, comments_count: 6, created_at: "2018-10-30 02:17:52", updated_at: "2019-10-08 10:25:00"},
-      {id: 951, caption: "", image: "https://res.cloudinary.com/dt1gn6erd/image/upload/v1637168741/jhfr6lg26efyccuha8yw.jpg", owner_id: 92, comments_count: 4, created_at: "2018-10-30 02:17:52", updated_at: "2019-10-08 10:25:00"}
+      {id: 951, caption: "", image: "https://res-1.cloudinary.com/dz9hkaczr/image/upload/v1638205228/mckd2piki2xftuzzr56d.jpg", owner_id: 92, comments_count: 4, created_at: "2018-10-30 02:17:52", updated_at: "2019-10-08 10:25:00"}
     ]
     Photo.insert_all!(photos)
     p "photos"
