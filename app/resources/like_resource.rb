@@ -10,5 +10,8 @@ class LikeResource < ApplicationResource
   belongs_to :fan,
              resource: UserResource
 
+  belongs_to :photo,
+             resource: PhotoResource
+
   # Indirect associations
 end
